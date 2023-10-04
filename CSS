@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.button {
+    color: white;
+    height: 36px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #690cb0;
+    border-width: 0px;
+}
+
+.button2 {
+    color: black;
+    font-weight: bold;
+    height: 36px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: white;
+    border-width: 0px;
+}
+
+
+.para2 {
+    color: #3e4c59;
+    font-size: 20px;
+}
+
+.bg-container {
+    background-image: linear-gradient(to right, #f2ebfe, #dac0ff);
+    height: 100vh;
+}
+
+.heading {
+    color: #690cb0;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.para {
+    color: #3e4c59;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.image {
+    width: 50px;
+    height: 60px;
+
+}
+
+.spam {
+    font-weight: 500;
+    font-family: "Roboto";
+    color: #3e4c59;
+    font-size: 15px;
+
+}
+
+.timer-text {
+    color: #323f4b;
+    font-size: 45px;
+}
+
+.card {
+    border-radius: 10px;
+    height: 50vh;
+    background-color: #f2ebfe;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.randomMessage {
+    color: #323f4b;
+    font-size: 20px;
+    font-family: "Roboto";
+}
