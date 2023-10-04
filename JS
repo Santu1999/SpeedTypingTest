@@ -1,0 +1,56 @@
+let speedTypingTestEl = document.getElementById("speedTypingTest")
+let timerEl = document.getElementById("timer")
+let quoteDisplayEl = document.getElementById("quoteDisplay")
+let resultEl = document.getElementById("result")
+let quoteInputEl = document.getElementById("quoteInput")
+let submitBtnEl = document.getElementById("submitBtn")
+let resetBtnEl = document.getElementById("resetBtn")
+let spinnerEl = document.getElementById("spinner")
+
+spinnerEl.classList.remove("d-none")
+
+let options = {
+    method: "GET"
+}
+
+let intervalId
+
+function startTimerAndDisplayQuote() {
+    fetch("https://apis.ccbp.in/random-quote", options)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(jsonData) {
+            quoteDisplayEl.textContent = jsonData.content
+            spinnerEl.classList.add("d-none")
+        })
+    let timer = 1
+    intervalId = setInterval(function() {
+        timer = timer + 1
+        timerEl.textContent = timer
+    }, 1000)
+}
+
+startTimerAndDisplayQuote()
+
+
+submitBtnEl.addEventListener("click", function() {
+    if (quoteDisplayEl.textContent === quoteInputEl.value) {
+        resultEl.textContent = "You typed in " + timerEl.textContent + " seconds."
+        clearInterval(intervalId)
+    } else {
+        resultEl.textContent = "You typed incorrect sentance"
+    }
+})
+
+
+
+resetBtnEl.addEventListener("click", function() {
+    quoteInputEl.value = ""
+    resultEl.textContent = ""
+    clearInterval(intervalId)
+    timerEl.textContent = 1
+    spinnerEl.classList.remove("d-none")
+    quoteDisplayEl.textContent = ""
+    startTimerAndDisplayQuote()
+})
